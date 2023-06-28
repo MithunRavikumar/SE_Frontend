@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <title>IMA</title>
+    <link rel="stylesheet" type="text/css" href="sty.css">
+    <body>
+        <div class="loginbox">
+            <img src="Indian-Military-Academy.jpg"  class="avatar">
+            <h1> Admin login</h1>
+            <form>
+                <p>Staff Finger print</p>
+                <p><img src="finger.jpg" height="50"></p>
+                <p>User id</p>
+                <input type="password" name="" id="uid" placeholder="enter id for verification">
+                <p>Password </p>
+                <input type="password" name="" id="pwd" placeholder="enter password for verification">
+                <input type="button" onclick="auth()" name="" value="login">
+            </form>
+        </div>
+        <script>
+            function redirect()
+        {
+            window.location.href="admin.html";
+        }
+            
+        function auth()
+        {
+            if(document.getElementById("pwd").value=="mi2003")
+            {
+                document.getElementById("status").innerHTML="Auth done ull be redirected";
+                setTimeout(redirect, 1000);
+            }
+
+            
+            else
+            {
+               alert(document.getElementById("status").innerHTML="Authorization failed") ;
+            }
+        }
+        </script>
+        <span id="status"></span>
+    </body>
+</html>
